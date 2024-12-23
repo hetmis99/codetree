@@ -1,9 +1,8 @@
 n = int(input())
-arr = []
 
-for i in range(n):
-    ele = int(input())
-    arr.append(ele)
+arr = list(map(int, input().split()))
 
-for i in reversed(arr):
-    if i%2 == 0:print(i, end=  ' ')
+arr = reversed(arr)
+for i in arr:
+    if i%2==0:
+        print(i, end = ' ')
