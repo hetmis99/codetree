@@ -8,8 +8,8 @@ for i in range(n, n//2, -1):
     string.append(ele)
     ele = ""
 
-    if i == n//2+1: break
-    
+    if i == n-i+1: break
+
     for j in range(n-i+1):
         ele += "* "
     string.append(ele)
