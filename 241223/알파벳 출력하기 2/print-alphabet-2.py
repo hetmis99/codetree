@@ -7,4 +7,5 @@ for i in range(n):
     for j in range(n-i):
         print(f"{ch}", end = ' ')
         ch = chr(ord(ch) + 1)
+        if ch == '[': ch = 'A'
     print()
