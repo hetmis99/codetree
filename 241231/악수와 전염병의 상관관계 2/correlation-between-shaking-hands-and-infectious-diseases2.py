@@ -24,9 +24,5 @@ for i in range(len(state)):
             left[x - 1] = ammo
         arr[x - 1] = 1
 
-for i in state:
-    a,b,c = i
-    print(a,b,c)
-
 for i in arr:
     print(i, end='')
