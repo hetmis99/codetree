@@ -15,9 +15,14 @@ for i in range(len(state)):
     tick,x,y = state[i]
     if left[x-1] > 0:
         left[x-1]-=1
+        if left[y-1]>0:
+            left[y-1]=2
         arr[y-1]=1
+        
     if left[y-1] > 0:
         left[y-1]-=1
+        if left[x-1]>0:
+            left[x-1]=2
         arr[x-1]=1
     
 
