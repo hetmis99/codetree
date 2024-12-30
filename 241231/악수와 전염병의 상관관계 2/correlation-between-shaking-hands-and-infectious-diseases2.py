@@ -18,7 +18,7 @@ for i in range(len(state)):
             left[y - 1] = ammo
         arr[y - 1] = 1
 
-    if left[y - 1] > 0:
+    elif left[y - 1] > 0:
         left[y - 1] -= 1
         if arr[x - 1] == 0:
             left[x - 1] = ammo
