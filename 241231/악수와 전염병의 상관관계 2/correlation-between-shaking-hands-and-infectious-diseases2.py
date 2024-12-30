@@ -1,7 +1,7 @@
 Number,ammo,first,T= map(int, input().split())
 arr = [0 for i in range(Number)]
 left = [0 for i in range(Number)]
-arr[first-1], left[first-1] = 1,2
+arr[first-1], left[first-1] = 1,ammo
 state = []
 
 
@@ -16,13 +16,13 @@ for i in range(len(state)):
     if left[x-1] > 0:
         left[x-1]-=1
         if left[y-1]>0:
-            left[y-1]=2
+            left[y-1]=ammo
         arr[y-1]=1
         
     if left[y-1] > 0:
         left[y-1]-=1
         if left[x-1]>0:
-            left[x-1]=2
+            left[x-1]=ammo
         arr[x-1]=1
     
 
