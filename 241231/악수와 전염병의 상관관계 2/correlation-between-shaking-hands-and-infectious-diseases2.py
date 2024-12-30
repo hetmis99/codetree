@@ -12,7 +12,11 @@ for i in range(T):
 state = sorted(state, key=lambda key: key[0])
 for i in range(len(state)):
     tick, x, y = state[i]
-    if left[x - 1] > 0:
+
+    if left[x - 1] > 0 and left[y - 1] > 0:
+        left[x - 1], left[y - 1] = left[x - 1] - 1, left[y - 1] - 1
+
+    elif left[x - 1] > 0:
         left[x - 1] -= 1
         if arr[y - 1] == 0:
             left[y - 1] = ammo
