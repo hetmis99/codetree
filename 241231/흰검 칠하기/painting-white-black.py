@@ -22,12 +22,12 @@ for _ in range(n):
 
 w, b, g = 0, 0, 0
 for count, dir in arr:
-    if 0 < count <= 3:
+    if count >= 4:
+        g += 1
+    elif count>0:    
         if dir == 'R':
             b += 1
         else:  # dir == 'L'
             w += 1
-    elif count >= 4:
-        g += 1
 
 print(w, b, g)
