@@ -21,7 +21,7 @@ for i in range(2, k+1):
 #raycasting
 x,y=sx,sy
 count = 0
-while x < n and x>=0 and y < n and x>=0:
+while x < n and x>=0 and y < n and y>=0:
     if arr[y][x] == '/':
         if dir == 0:
             dir = 3
