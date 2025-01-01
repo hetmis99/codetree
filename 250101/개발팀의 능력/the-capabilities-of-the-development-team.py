@@ -9,7 +9,7 @@ for i in range(4):
         t1 = arr[i]+arr[j]
 
         for k in range(4):
-            for l in range(i+1, 5):
+            for l in range(k+1, 5):
                 if k==i or k==j or l==i or l==j:
                     continue
                 t2 = arr[k]+arr[l]
@@ -19,6 +19,7 @@ for i in range(4):
                         continue
                     t3 = arr[m]
                     if(t1==t2 or t1==t3 or t2==t3):continue
+                    
                     mx = max(t1,t2,t3)
                     mn = min(t1,t2,t3)
                     
