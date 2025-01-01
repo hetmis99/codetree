@@ -4,26 +4,26 @@ t1,t2,t3=0,0,0
 mx,mn=0,0
 minv=100000000
 
-for i in range(4):
-    for j in range(i+1, 5):
-        t1 = arr[i]+arr[j]
+sum=0
+for i in arr:
+    sum+=i
 
-        for k in range(4):
-            for l in range(k+1, 5):
-                if k==i or k==j or l==i or l==j:
-                    continue
-                t2 = arr[k]+arr[l]
-
-                for m in range(5):
-                    if m==i or m==j or m==k or m==l:
-                        continue
-                    t3 = arr[m]
-                    if(t1==t2 or t1==t3 or t2==t3):continue
+for i in range(5):
+    for j in range(5):
+        for k in range(5):
+            if i!=j and i!=k and j!=k:
+                tmp = sum
+                t1 = arr[i]+arr[j]
+                t2 = arr[k]
+                t3 = tmp-t1-t2
+                if(t1==t2 or t1==t3 or t2==t3):continue
                     
-                    mx = max(t1,t2,t3)
-                    mn = min(t1,t2,t3)
+                mx = max(t1,t2,t3)
+                mn = min(t1,t2,t3)
                     
-                    minv = min(mx-mn,minv)
+                minv = min(mx-mn,minv)
 
-
-print(minv)
+if minv == 100000000:
+    print(-1)
+else:
+    print(minv)
