@@ -8,12 +8,17 @@ for i in range(n):
     sum = 0
     count = 0
     tmp = arr.copy()
-    pi,si=tmp[i]
-    tmp[i] = (pi//2,si)
-    tmp = sorted(tmp, key = lambda key: key[0])
+    
+    tmp = [0] * n
+    for j in range(n):
+        tmp[j] = arr[j][0] + arr[j][1]
+    tmp[i] = arr[i][0] // 2 + arr[i][1]
+
+    tmp = sorted(tmp)
+
     for j in range(n):
         if sum>b: break
-        sum+=tmp[j][0]+tmp[j][1]
+        sum+=tmp[j]
         count+=1
 
 print(count)
