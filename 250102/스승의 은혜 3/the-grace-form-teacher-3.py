@@ -4,6 +4,7 @@ for i in range(n):
     p,s=map(int,input().split())
     arr.append((p,s))
 
+max = 0
 for i in range(n):
     sum = 0
     count = 0
@@ -17,8 +18,9 @@ for i in range(n):
     tmp = sorted(tmp)
 
     for j in range(n):
-        if sum>b: break
+        if sum+tmp[j]>b: break
         sum+=tmp[j]
         count+=1
+    if max<count: max=count
 
-print(count)
+print(max)
